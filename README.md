@@ -96,12 +96,17 @@ You successfully added a shebang and the permissions. Now run your python-script
 ## Questions
 
 1. What does REPL stand for, and why is it useful?
-2. Why does `range(1, 101)` include 100 but not 101?
-3. What happens when you call `print()` in Python? What's executed under the hood?
-4. What is the role of `__name__ == "__main__"` in a script?
-5. How does a shebang line help in Linux environments?
-6. What's the difference between importing a library and accessing a built-in?
-
+   REPL describe shell like behavior , is usefull for prototyping. READ_EVALUATE_PRINT_LOOP
+3. Why does `range(1, 101)` include 100 but not 101?
+   because in python range(1, 101) range(start,stop, step) are defined like range(start +1, stop -1, step 1).
+5. What happens when you call `print()` in Python? What's executed under the hood?
+   if we take a look how the signature of print() looks like we can understand that its lookslike assambly print(*buffer, separator='', end='\n',file=sys.stdout, flush=false) so first we need to show which buffer we should use, then separator of the string, the end of string(default \n), and the place where should we get our output file=sys.stdout, at the end we got flush option to flush the content immediately(usefull for realtime outputs)
+7. What is the role of `__name__ == "__main__"` in a script?
+   __name__ is internal variable in every Paython Module (in every .py file), if we call our programm like ./python.py the block __name__=="__main__" (value of __name__ is __main__)will be executed. if we import our file python.py in other file.
+9. How does a shebang line help in Linux environments?
+  it helps the Unix system to understand which programm should be used to execute the script.
+11. What's the difference between importing a library and accessing a built-in?
+The builtins are available after we installed python like print etc. the librarys must be imported and they are containing function which we cant use by default installation.
 
 ## Advice
 
